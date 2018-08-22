@@ -4,7 +4,9 @@
   "description": "A retro gaming library built with React, Node and Redux",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_ENV=development webpack-dev-server",
+    "api": "babel-node server.js",
+    "build": "NODE_ENV=build webpack"
   },
   "author": "Josh Bryson",
   "license": "ISC",
