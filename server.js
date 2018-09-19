@@ -49,6 +49,7 @@ app.route('/games')
     .post(postGame)
     //Get all Games
     .get(getGames);
+    
 app.route('/games/:id')
     //Get Single Game
     .get(getGame)
