@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Routes from './routes';
 
-const FileStack = require('./config').FILESTACK;
+const FileStack = require('../../config').FILESTACK;
 
 // Don't forget to add your API key
 filepicker.setKey(FileStack);

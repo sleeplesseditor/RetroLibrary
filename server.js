@@ -20,9 +20,12 @@ const options = {
     server: { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000 } },
     replset: { socketOptions: { keepAlive: 1, connectTimeoutMS: 30000 } }
 };
+
+const MONGODB = require('./config').MONGODB;
+
 mongoose.Promise = global.Promise;
 
-mongoose.connect('YOUR_MONGO_CONNECTION', options);
+mongoose.connect(MONGODB, options);
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
