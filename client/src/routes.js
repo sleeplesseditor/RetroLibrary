@@ -1,16 +1,16 @@
 import React from 'react';
-import { Route, HashRouter, IndexRoute } from 'react-router-dom';
+import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 import { Home, Welcome, About, Contact } from './components';
 
 // Use hashHistory for easier development
 const routes = (
-  <HashRouter>
+  <Router history={hashHistory}>
     <Route path="/" component={Home}>
       <IndexRoute component={Welcome} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
     </Route>
-  </HashRouter>
+  </Router>
 );
 
 export default routes;
